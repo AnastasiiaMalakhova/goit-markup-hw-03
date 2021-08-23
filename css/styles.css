@@ -33,6 +33,11 @@ h6 {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -138,7 +143,10 @@ ul {
   font-style: normal;
   line-height: 1.71;
   display: inline-block;
-  margin-top: 9px;
+}
+
+.contacts > .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link.address,
@@ -182,6 +190,8 @@ ul {
 .hero {
   background-color: var(--dark-bgc);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -194,7 +204,6 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
-  padding-top: 200px;
 }
 
 .hero-button {
@@ -207,7 +216,6 @@ ul {
 
   min-width: 200px;
   padding: 10px 32px;
-  margin-bottom: 200px;
 }
 
 .hero-button:hover,
@@ -247,6 +255,10 @@ ul {
   display: flex;
 }
 
+.advantades-list.list > .item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
 .advantades-list > .item:not(:last-child),
 .section-list > .item:not(:last-child),
 .section-team > .item:not(:last-child) {
@@ -262,45 +274,42 @@ ul {
 /*Team*/
 
 .section-team .item {
+  flex-basis: calc((100% - 90px) / 4);
   background-color: var(--white-color);
-  border-radius: 5px;
-  box-shadow: var(--card-shadow);
 }
 
-.section-title.team,
-.section-team.profession {
+.section-title-team,
+.section-team-profession {
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 
-.section-title.team {
+.section-title-team {
   font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 0px;
 }
 
-.section-team.profession {
+.section-team-profession {
   color: var(--second-text-color);
   margin-top: 10px;
-  margin-bottom: 30px;
 }
 
-.section-team.section {
+.team.section {
   background-color: var(--light--bgc);
 }
 
 .section-team {
   display: flex;
-  justify-content: center;
+}
+
+.team-name {
+  padding: 30px 32px;
+  border-radius: 5px;
+  box-shadow: var(--card-shadow);
 }
 
 /*Portfolio*/
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 .works-title {
   font-weight: 700;
   font-size: 18px;
@@ -331,12 +340,9 @@ img {
 }
 
 .works > .item {
-  flex-basis: calc((100% - 68px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-  border-right: 1px solid var(--border-cards);
-  border-bottom: 1px solid var(--border-cards);
-  border-left: 1px solid var(--border-cards);
 }
 
 .works > .item:nth-child(3n + 3) {
@@ -349,4 +355,7 @@ img {
 
 .works-content {
   padding: 20px 24px;
+  border-right: 1px solid var(--border-cards);
+  border-bottom: 1px solid var(--border-cards);
+  border-left: 1px solid var(--border-cards);
 }
